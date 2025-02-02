@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Personal Resume</title>
+<link href="styles.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="css/prettyPhoto.css" type="text/css" media="screen" charset="utf-8" />
+<link href='http://fonts.googleapis.com/css?family=Bree+Serif' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+<script type='text/javascript' src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js?ver=3.3"></script>	
+<script type="text/javascript" src="js/jquery.prettyPhoto.js"></script>
+<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+
+</head>
+
+
+<body>
+<div id="header">
+	<div id="logo"><a href="#"><img src="images/logo.png"></a></div>
+	<ul id="main-menu">
+    	<li><a href="#about">Обо мне</a></li>
+        <li><a href="#experience">Информация</a></li>
+        <!-- <li><a href="#work">Work</a></li> -->
+        <li><a href="#connect">Оставить заявку</a></li>
+    </ul>
+</div>
+
+<div id="container">
+
+<!--Begin About Section-->
+    <div id="about">
+    	<h1>Обо мне</h1>
+        <ul id="top-social">
+        </ul>
+        <div class="top-divider"></div>
+        <div class="content">
+        	<img src="images/designer-photo.jpg" />
+            <h2>Меня завут Данил и я репетитор по программированию</h2>
+            <p>
+            Я явлюсь репетитором по программированию и занимаюсь с людьми всех возрастов.            
+            Работаю с языком Python уже четыре года, также учусь на информационные технологии 
+            имею диплом младшего специалиста в области автоматизации и компюьтерно-интегрированых технологий,  
+            Со мной вы сможете пройти путь до программиста web приложений на Django-HTML-JS-CSS также освоить такие темы как: Telegram боты, Excel-python, шифрование, сбор данных с сайтов, автоматизация браузера или пк, и так далее.
+            Работаю с любым возрастом и начальным знанием языка можно даже на примере minecrat.
+               </p> 
+            <ul id="service-icons">
+            	<li class="services-design">Design</li>
+                <li class="services-mobile">Mobile</li>
+                <li class="services-film">Film</li>
+                <li class="services-photo">Photo</li>
+            </ul>
+        </div>
+    <div class="bottom-divider"></div> 
+    </div>
+<!--End About Section-->
+
+<!--Begin Experience Section-->   
+    <div id="experience">
+    	<h1>Информация</h1>
+        <div class="top-divider"></div>
+        <div class="content">
+            <div class="col">
+            <h2>В каком виде</h2>
+            <p>Уроки будут проходить онлайн через Skype\Zoom или ваш канал связи, на украинском или русском языках, длинной в час или полтора, время как вам будет удобно, если есть окошко на него, во время занятий при желании могу помочь с проектом </p>
+            </div>
+            
+            <div class="col col-mid">
+            <h2>Дополнительно</h2>
+            <p> Так-же всем ученикам отвечаю на вопросы в telegram или помогаю с несложным кодом или проектом, но по возможности, если есть сильное желание реализовать сложный проект всегда можно будет договорится</p>
+            </div>
+            
+            <div class="col">
+            <h2>Физика-Математика</h2>
+            <p>Так-же уроки по физике и математики, вся школьная программа, если нужно также могу помочь с другими разделами физики и высшей и дискретной математикой. </p>
+            </div>
+        </div>    
+        <div class="bottom-divider"></div>
+    </div>
+
+<!--Begin Connect Section-->  
+    <div id="connect">
+    	<h1>Оставить заявку</h1>
+        <div class="top-divider"></div>
+        	<div class="content">
+            	<div id="form">
+                	<form action="">
+                    	<span>Имя</span>
+                        <input type="text" name="name" class="name" id="name"/>
+                        <span>Телефон</span>
+                        <input type="text" name="email" class="email" id="email"/>
+                        <span>Сообщение</span>
+                        <textarea class="message" name="submite" id="message"></textarea>
+                        <input type="button" value="Submit" class="submit" onclick='sendMessage()'  id="button1">
+                    </form>
+                </div>
+                <div id="social-footer">
+                	<h2>Связь:</h2>
+                    <p>Вы можете оставить заявку и я вам сразу перезвоню, также вы можете связатся через соц. сети ниже или по моему <a href="+380668937031">номеру телефона</a></p>
+                    <ul id="sm-links">
+                    	<li><a href="https://www.instagram.com/liluserneme/?" class="instagram">instagram</a></li>
+           				<li><a href="https://t.me/mood_coding" class="telegram">telegram</a></li>
+            			<li><a href="https://join.skype.com/invite/IhcvDfp4R8CQ" class="skype">skype</a></li>
+                        <li><a href="tel:0668937031" class="phone">phone</a></li>
+
+                    </ul>
+                </div>
+            </div>
+    </div>
+<!--End Connect Section--> 
+
+</div>
+
+ <!-- The JavaScript -->  
+        <script type="text/javascript">
+    		$(function() {
+                $('#main-menu li a').bind('click',function(event){
+                    var $anchor = $(this);
+                    
+                    $('html, body').stop().animate({
+                        scrollTop: $($anchor.attr('href')).offset().top
+                    }, 1500,'easeInOutExpo');
+
+                    event.preventDefault();
+                });
+            });
+			
+ 			 $(document).ready(function(){
+    		$("a[rel^='prettyPhoto']").prettyPhoto({social_tools:false, deeplinking: false});
+  			});
+
+
+
+    function sendMessage() {
+
+
+    // Замените 'YOUR_BOT_TOKEN', 'USER_CHAT_ID' и 'YOUR_MESSAGE' на действительные значения
+    const obfuscatedToken = 'NjEyODI5NzgzNDpBQUVzN0hkMVlkTnU2TFhyZ052X0xOZUhBQ3VHaEI2cDBtMA==';
+    const botToken = atob(obfuscatedToken); 
+    console.log(botToken)
+    // const botToken = '6128297834:AAEs7Hd1YdNu6LXrgNv_LNeHACuGhB6p0m0';
+    const userChatId = '5975226637';
+    const messageText1 = document.getElementById('name').value;
+    const messageText2 = document.getElementById('email').value;
+    const messageText3 = document.getElementById('message').value;
+
+    const messageText = "Имя: " + messageText1 + "\nТелефон: " + messageText2 + "\nСообщение: " + messageText3;
+
+// Формируем URL для отправки сообщения
+    const apiUrl = `https://api.telegram.org/bot${botToken}/sendMessage?chat_id=${userChatId}&text=${encodeURIComponent(messageText)}`;
+
+// Отправляем запрос с использованием функции fetch
+    fetch(apiUrl)
+      .then(response => response.json())
+      .then(data => console.log(data))
+      .catch(error => console.error('Error:', error));
+
+    const button = document.getElementById('button1')
+    button.remove()
+    // button.() = "<h3>Я вам скоро передзвоню!</h3>"
+    }
+
+
+
+        </script>
+</body>
+</html>
